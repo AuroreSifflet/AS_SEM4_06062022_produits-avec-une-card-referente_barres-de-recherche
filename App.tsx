@@ -1,11 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from "react-native";
+import * as React from "react";
+// import dataCard from "./js/data.js";
+// import CardHeader from "./components/CardHeader";
+// import CardBody from "./components/CardBody";
+
+// import CardFooter from "./components/CardFooter";
+import Card from "./components/Card";
+
+interface CardLikeBtnprops {
+  price: string;
+  title: string;
+  desc: string;
+  likes?: string;
+  photo: any;
+  id: string;
+}
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Card
+      /* price={price}
+            title={title}
+            desc={desc}
+            photo={photo}
+            likes={likes}
+            key={id} */
+      />
     </View>
   );
 }
@@ -13,8 +34,14 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    //backgroundColor: "red",
+  },
+
+  viewCard: {
+    flex: 1,
+    backgroundColor: "#fff",
+  },
+  scroll: {
+    flex: 1,
   },
 });
